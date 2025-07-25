@@ -1,0 +1,127 @@
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  background: white;
+  overflow-x: hidden;
+}
+
+.banner-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.banner-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.gradient-top {
+  position: absolute;
+  top: -500px;
+  left: -1000px;
+  width: 2000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 247, 197, 0.8) 0%,
+    rgba(200, 247, 197, 0.6) 30%,
+    rgba(200, 247, 197, 0.3) 60%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.gradient-bottom {
+  position: absolute;
+  bottom: -500px;
+  right: -1000px;
+  width: 2000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 247, 197, 0.8) 0%,
+    rgba(200, 247, 197, 0.6) 30%,
+    rgba(200, 247, 197, 0.3) 60%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+/* Banner Section Styles - Enhanced Centralization */
+.banner-section {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.button-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  background: #008060 !important;
+  border-color: #008060 !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.button-container button:hover {
+  background: #006848 !important;
+  border-color: #006848 !important;
+}
+
+.features-section {
+  margin: 0 8rem;
+}
+@media (max-width: 1200px) {
+  .features-section {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gradient-top {
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .gradient-bottom {
+    bottom: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .banner-container {
+    padding: 0 1rem;
+  }
+
+  .features-section {
+    margin: 0 10px;
+  }
+}
