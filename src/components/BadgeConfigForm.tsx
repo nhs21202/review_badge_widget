@@ -119,7 +119,7 @@ function BadgeConfigForm({
           logoUrl = "/logos_google.svg";
           break;
         case "facebook":
-          logoUrl = "/facebook_blue.svg";
+          logoUrl = "/facebook_blue.png";
           break;
         case "other":
           logoUrl = "";
@@ -143,7 +143,7 @@ function BadgeConfigForm({
           logoUrl = "/logos_google_small.svg";
           break;
         case "facebook":
-          logoUrl = "/facebook_white.svg";
+          logoUrl = "/facebook_white.png";
           break;
         case "other":
           logoUrl = "";
@@ -494,7 +494,7 @@ function BadgeConfigForm({
             logoUrl = "/logos_google_small.svg";
             break;
           case "facebook":
-            logoUrl = "/facebook_white.svg";
+            logoUrl = "/facebook_white.png";
             break;
           case "other":
             logoUrl = uploadedImages.length > 0 ? uploadedImages[0].url : "";
@@ -508,7 +508,7 @@ function BadgeConfigForm({
             logoUrl = "/logos_google.svg";
             break;
           case "facebook":
-            logoUrl = "/facebook_blue.svg";
+            logoUrl = "/facebook_blue.png";
             break;
           case "other":
             logoUrl = uploadedImages.length > 0 ? uploadedImages[0].url : "";

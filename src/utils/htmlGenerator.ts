@@ -40,7 +40,7 @@ export const convertImageToBase64 = (imageUrl: string): Promise<string> => {
 export const generateStarsHTML = (
   averageRating: number,
   starColor: string,
-  fontSize: string = "35"
+  fontSize: string = "40"
 ) => {
   const percentage = Math.min(Math.max((averageRating / 5) * 100, 0), 100);
 
@@ -52,7 +52,7 @@ export const generateStarsHTML = (
           .fill(0)
           .map(
             () => `
-        <div style="width: 37px; height: 37px;">
+        <div style="width: ${fontSize}px; height: ${fontSize}px;">
           <svg width="${fontSize}" height="${fontSize}" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z" fill="#E0E0E0"/>
           </svg>
@@ -67,7 +67,7 @@ export const generateStarsHTML = (
           .fill(0)
           .map(
             () => `
-        <div style="width: 37px; height: 37px; flex-shrink: 0;">
+        <div style="width: ${fontSize}px; height: ${fontSize}px; flex-shrink: 0;">
           <svg width="${fontSize}" height="${fontSize}" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z" fill="${starColor}"/>
           </svg>
@@ -153,7 +153,7 @@ export const generateBadgeLayout1HTML = async (badgeData: BadgeData) => {
             padding: 10px;
         ">
             <p style="
-                margin: 5px 0;
+                margin: 0;
                 font-size: 50px;
                 font-weight: bold;
                 font-family: 'Inter', sans-serif;
@@ -171,7 +171,7 @@ export const generateBadgeLayout1HTML = async (badgeData: BadgeData) => {
         <!-- Text Section -->
         <div>
             <p style="
-                margin: 5px 0;
+                margin: 0;
                 color: ${badgeData.colorConfig?.text || "#000"};
             ">
                 ${badgeData.text || ""}
@@ -224,15 +224,13 @@ export const generateBadgeLayout2HTML = async (badgeData: BadgeData) => {
         align-items: center;
         border: 1px solid ${badgeData.colorConfig?.stroke || "#ccc"};
         border-radius: 10px;
-        padding: 10px;
-        gap: 10px;
+        padding: 5px;
         background-color: ${badgeData.colorConfig?.background || "#fff"};
         color: ${badgeData.colorConfig?.text || "#000"};
         width: 300px;
         min-height: 150px;
     ">
         <h3 style="
-            padding: 5px 0;
             color: ${
               badgeData.colorConfig?.storeName ||
               badgeData.colorConfig?.text ||
@@ -240,15 +238,16 @@ export const generateBadgeLayout2HTML = async (badgeData: BadgeData) => {
             };
             font-size: 20px;
             font-weight: bold;
+            margin-block:10px;
         ">
             ${badgeData.storeName || ""}
         </h3>
         
-        <div style="font-size: 30px;">
+        <div style="font-size: 30px; margin-block:5px;">
             ${starsHTML}
         </div>
         
-        <p>
+        <p style="margin: 0 0 15px 0;font-size:14px;">
             <span style="font-weight: bold;">${
               badgeData.averageRating || "0.0"
             } </span>
@@ -392,14 +391,12 @@ export const generateBadgeLayout4HTML = async (badgeData: BadgeData) => {
         color: ${badgeData.colorConfig?.text || "#000"};
         width: 300px;
         min-width: 300px;
-        min-height: 150px;
     ">
         <div style="
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            padding: 20px;
-            height: 100%;
+            margin-top:10px;
+    
         ">
             <div style="
                 display: flex;
@@ -432,7 +429,7 @@ export const generateBadgeLayout4HTML = async (badgeData: BadgeData) => {
               badgeData.colorConfig?.footerBackground || "#000"
             };
         ">
-            <p style="font-size: 12px; color: white;">
+            <p style="font-size: 12px; color: white; margin: 0;">
                 ${badgeData.verifiedText || ""}
             </p>
             ${logoSection}
