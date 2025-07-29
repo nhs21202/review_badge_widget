@@ -1,12 +1,11 @@
 body {
   font-family: "Manrope", sans-serif;
+  background-color: white !important;
 }
 
 .app {
-  min-height: 100vh;
   position: relative;
   background: white;
-  overflow-x: hidden;
 }
 
 .banner-title {
@@ -96,9 +95,41 @@ body {
 .features-section {
   margin: 0 8rem;
 }
+
+.badge-preview-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.badge-preview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 5px;
+  flex: 1 1 auto;
+}
+.badge-preview-item-image {
+  cursor: pointer;
+}
+.ot-color-picker {
+  display: flex;
+  max-width: 150px;
+}
+.ot-color-widget-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 20px 20px 20px;
+  gap: 10px;
+}
+
 @media (max-width: 1200px) {
   .features-section {
     margin: 0 2rem;
+  }
+  .ot-color-widget-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -122,6 +153,14 @@ body {
   }
 
   .features-section {
-    margin: 0 10px;
+    margin: 0 1rem;
+  }
+  .ot-color-widget-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .ot-color-widget-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
