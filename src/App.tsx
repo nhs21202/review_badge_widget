@@ -17,7 +17,7 @@ import type { BadgeData } from "./types/badge.type";
 function App() {
   const [isValidRating, setIsValidRating] = useState(true);
   const [layout, setLayout] = useState("layout-1");
-
+ 
   const initialBadgeData: BadgeData = useMemo(
     () => ({
       logo: "google",

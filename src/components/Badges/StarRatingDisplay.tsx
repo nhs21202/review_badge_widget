@@ -1,4 +1,3 @@
-import React from "react";
 
 const StarRating = ({ averageRating = 0, starColor = "#FFD700" }) => {
   const percentage = Math.min(Math.max((averageRating / 5) * 100, 0), 100);

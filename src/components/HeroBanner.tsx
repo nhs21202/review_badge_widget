@@ -1,5 +1,4 @@
 import { BlockStack, Box, Button } from "@shopify/polaris";
-import React from "react";
 
 const HeroBanner = () => {
   return (

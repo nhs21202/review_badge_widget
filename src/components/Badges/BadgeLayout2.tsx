@@ -1,4 +1,3 @@
-import React from "react";
 import type { BadgeData } from "../../types/badge.type";
 import StarRating from "./StarRatingDisplay";
 
