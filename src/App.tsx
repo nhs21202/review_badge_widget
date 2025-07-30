@@ -17,7 +17,7 @@ import type { BadgeData } from "./types/badge.type";
 function App() {
   const [isValidRating, setIsValidRating] = useState(true);
   const [layout, setLayout] = useState("layout-1");
- 
+
   const initialBadgeData: BadgeData = useMemo(
     () => ({
       logo: "google",
@@ -69,7 +69,7 @@ function App() {
     <div className="app">
       <div className="gradient-top"></div>
       <div className="gradient-bottom"></div>
-      W <HeroBanner />
+      <HeroBanner />
       <div className="features-section">
         <InlineGrid
           columns={{ xs: 1, sm: 1, md: 12, lg: 12, xl: 12 }}
