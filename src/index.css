@@ -1,0 +1,11 @@
+/* Minimal fix for mobile scrollbar issues */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
